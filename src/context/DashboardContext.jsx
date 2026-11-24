@@ -203,6 +203,7 @@ export function DashboardProvider({ children }) {
   const [academicTab, setAcademicTab] = useState('schedule'); // 'schedule' | 'assignments' | 'resources'
   const [activeModal, setActiveModal] = useState(null); // 'transaction' | 'task' | 'assignment' | 'note' | 'vault-account' | 'subscription' | 'goal' | 'bill' | 'reminder' | 'course' | 'schedule-slot'
   const [isCalendarOpen, setIsCalendarOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
   const [toasts, setToasts] = useState([]);
 
@@ -961,6 +962,9 @@ export function DashboardProvider({ children }) {
         isCalendarOpen,
         setIsCalendarOpen,
         toggleCalendar: () => setIsCalendarOpen((prev) => !prev),
+        isSidebarOpen,
+        setIsSidebarOpen,
+        toggleSidebar: () => setIsSidebarOpen((prev) => !prev),
         searchQuery,
         setSearchQuery,
         toasts,

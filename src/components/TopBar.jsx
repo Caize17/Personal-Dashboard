@@ -1,10 +1,11 @@
 import React, { useState, useMemo } from 'react';
-import { Bell, Calendar, CheckCircle2, Clock, AlertCircle, BellRing } from 'lucide-react';
+import { Bell, Calendar, CheckCircle2, Clock, AlertCircle, BellRing, Menu } from 'lucide-react';
 import { useDashboard } from '../context/DashboardContext';
 
 export default function TopBar() {
   const {
     toggleCalendar,
+    toggleSidebar,
     setActiveView,
     data,
     showToast,
@@ -88,7 +89,16 @@ export default function TopBar() {
 
   return (
     <header className="top-bar">
-      <div />
+      <div className="top-bar-left">
+        <button
+          className="sidebar-toggle-btn icon-btn-round"
+          onClick={toggleSidebar}
+          title="Toggle Navigation"
+          aria-label="Toggle Navigation"
+        >
+          <Menu size={18} />
+        </button>
+      </div>
       {/* Right side: Notifications & Calendar Drawer Trigger */}
       <div className="top-actions-group" style={{ position: 'relative' }}>
         {/* Calendar Side Drawer Trigger */}
