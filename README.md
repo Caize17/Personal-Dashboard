@@ -33,18 +33,18 @@ A local-first, all-in-one personal productivity, finance, academic, and credenti
 
 ## 🛠️ Tech Stack
 
-* **Frontend:** React, JavaScript / TypeScript, CSS
-* **Desktop Runtime:** Tauri (Rust + Windows WebView2)
-* **Local Storage & Alerts:** Browser/WebView local persistence & Tauri Native Notification API
+- **Frontend:** React, CSS, Vite
+- **Desktop Runtime:** Tauri 2.0 (Rust + Windows WebView2, Serde / Serde JSON)
+- **State & Local Persistence:** React Context API (`DashboardContext.jsx`), WebView `localStorage`, JSON Backup/Restore & Tauri Notification Plugin (`tauri-plugin-notification` v2)
 
 ---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-* [Node.js](https://nodejs.org/) (v18+ recommended)
-* [Rust & Cargo](https://www.rust-lang.org/tools/install) (with the `stable-x86_64-pc-windows-msvc` toolchain)
-* Microsoft Visual Studio C++ Build Tools & WebView2 (pre-installed on Windows 11)
+- [Node.js](https://nodejs.org/) (v18+ recommended)
+- [Rust & Cargo](https://www.rust-lang.org/tools/install) (with the `stable-x86_64-pc-windows-msvc` toolchain)
+- Microsoft Visual Studio C++ Build Tools & WebView2 (pre-installed on Windows 11)
 
 ### Installation
 
@@ -53,17 +53,14 @@ A local-first, all-in-one personal productivity, finance, academic, and credenti
    git clone [https://github.com/your-username/my-dashboard.git](https://github.com/your-username/my-dashboard.git)
    cd my-dashboard
    ```
-
-# Run in Desktop Development Mode (with Live Reload)
+2. **Run in Desktop Development Mode (with Live Reload)**
    ```bash
    npm run tauri dev
    ```
-
-# Build the Standalone Desktop Application
+3. **Build the Standalone Desktop Application**
    ```bash
    npm run tauri build
    ```
-
 The compiled .exe and installer will be generated inside src-tauri/target/release/bundle/.
 
 ## 📄 License
